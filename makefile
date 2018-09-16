@@ -1,6 +1,8 @@
 CC = gcc
 CFLAGS = -g3 -ggdb -Wall -O0 -Werror=implicit-function-declaration
 
+BINS := test_init test_pigeon test_self test_tun
+
 OBJDIR := objs
 
 SRCS= \
@@ -43,7 +45,7 @@ SRCS= \
 
 LIB = $(OBJDIR)/libkern.a 
 
-all: $(addprefix $(OBJDIR))
+all: $(addprefix $(OBJDIR)/,$(BINS))
 
 
 $(OBJDIR)/%.o:%.c
