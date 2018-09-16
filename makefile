@@ -6,12 +6,43 @@ BINS := test_init test_pigeon test_self test_tun
 OBJDIR := objs
 
 SRCS= \
-    freebsd/kern/kern_subr.c \
-    freebsd/kern/uipc_domain.c \
-    freebsd/kern/uipc_mbuf.c \
-    freebsd/kern/uipc_socket.c \
-    freebsd/kern/uipc_socket2.c \
-    freebsd/kern/sys_socket.c \
+	freebsd/kern/kern_descrip.c      \
+	freebsd/kern/kern_event.c        \
+	freebsd/kern/kern_fail.c         \
+	freebsd/kern/kern_khelp.c        \
+	freebsd/kern/kern_hhook.c        \
+	freebsd/kern/kern_linker.c       \
+	freebsd/kern/kern_mbuf.c         \
+	freebsd/kern/kern_module.c       \
+	freebsd/kern/kern_mtxpool.c      \
+	freebsd/kern/kern_ntptime.c      \
+	freebsd/kern/kern_osd.c          \
+	freebsd/kern/kern_sysctl.c       \
+	freebsd/kern/kern_tc.c           \
+	freebsd/kern/kern_uuid.c         \
+	freebsd/kern/link_elf.c          \
+	freebsd/kern/md5c.c              \
+	freebsd/kern/subr_capability.c   \
+	freebsd/kern/subr_counter.c      \
+	freebsd/kern/subr_eventhandler.c \
+	freebsd/kern/subr_kobj.c         \
+	freebsd/kern/subr_lock.c         \
+	freebsd/kern/subr_module.c       \
+	freebsd/kern/subr_param.c        \
+	freebsd/kern/subr_pcpu.c         \
+	freebsd/kern/subr_sbuf.c         \
+	freebsd/kern/subr_taskqueue.c    \
+	freebsd/kern/subr_unit.c         \
+	freebsd/kern/sys_capability.c    \
+	freebsd/kern/sys_generic.c       \
+	freebsd/kern/sys_socket.c        \
+	freebsd/kern/uipc_accf.c         \
+	freebsd/kern/uipc_mbuf.c         \
+	freebsd/kern/uipc_mbuf2.c        \
+	freebsd/kern/uipc_domain.c       \
+	freebsd/kern/uipc_sockbuf.c      \
+	freebsd/kern/uipc_socket.c       \
+	freebsd/kern/uipc_syscalls.c \
     freebsd/net/if.c \
     freebsd/net/if_ethersubr.c \
     freebsd/net/if_loop.c \
