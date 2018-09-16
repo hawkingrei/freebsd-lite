@@ -47,6 +47,8 @@ LIB = $(OBJDIR)/libkern.a
 
 all: $(addprefix $(OBJDIR)/,$(BINS))
 
+$(OBJDIR)/test_%: tests/%.c $(LIB)
+	$(CC) $(CFLAGS) $< $(LIB) -o $@
 
 $(OBJDIR)/%.o:%.c
 	$(CC) $(CFLAGS) $(KERNFLAGS) -c $< -o $@
