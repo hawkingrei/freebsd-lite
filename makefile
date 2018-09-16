@@ -43,10 +43,8 @@ SRCS= \
 
 LIB = $(OBJDIR)/libkern.a 
 
-all: $(addprefix $(OBJDIR)/,$(BINS))
+all: $(addprefix $(OBJDIR))
 
-$(OBJDIR)/test_%: tests/%.c $(LIB)
-	$(CC) $(CFLAGS) $< $(LIB) -o $@
 
 $(OBJDIR)/%.o:%.c
 	$(CC) $(CFLAGS) $(KERNFLAGS) -c $< -o $@
