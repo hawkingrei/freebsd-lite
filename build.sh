@@ -3,7 +3,7 @@
 set -x
 
 CC="gcc -g3 -Wall -O0 -undef -nostdinc -fno-builtin "
-CC="$CC -I./opt -I./freebsd/sys -DKERNEL -DINET -DTCPDEBUG -I sys "
+CC="$CC -I./opt -I./freebsd/sys -DKERNEL -DINET -DTCPDEBUG"
 # CC="$CC -I./opt -I./freebsd/sys -finstrument-functions "
 
 mkdir -p objs
